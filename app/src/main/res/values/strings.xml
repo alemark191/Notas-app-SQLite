@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Notas App-SQLite</string>
+    
+    <string name="txtAgregarNota">agregar nota</string>
+    <string name="etTitulo">titulo de la nota</string>
+    <string name="etContenido">contenido de la nota</string>
 </resources>
