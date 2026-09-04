@@ -19,7 +19,8 @@
         android:layout_alignParentTop="true"
         android:layout_margin="15dp"
         android:textColor="@color/morado"
-        android:textSize="25sp"/>
+        android:textSize="25sp"
+        android:padding="10dp"/>
 
     <ImageView
         android:id="@+id/ivGuardarNota"
@@ -55,8 +56,15 @@
         android:padding="10dp"
         >
 
+        <EditText
+            android:id="@+id/etDescripcion"
+            android:hint="@string/etDescripcion"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
-        ></com.google.android.material.textfield.TextInputLayout>
+
+        </com.google.android.material.textfield.TextInputLayout>
 
 
 

@@ -1,5 +1,6 @@
 package com.example.notasapp_sqlite
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -24,9 +25,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.FABAgregarNota.setOnClickListener {
-            Toast.makeText(applicationContext,
-                "has presionado en el FAB",
-                Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, AgregarNotaActivity::class.java)
+            startActivity(intent)
         }
     }
 }
