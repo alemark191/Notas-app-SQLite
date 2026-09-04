@@ -9,16 +9,6 @@ class NotasDatabaseHelper(context: Context) : SQLiteOpenHelper(
     context, DATABASE_NAME, null, DATABASE_VERSION
 ) {
 
-    fun insertNota(nota: Nota) {
-        val db = writableDatabase
-        val values = ContentValues().apply {
-            put(COLUMN_TITLE, nota.titulo)
-            put(COLUMN_DESCRIPTION, nota.descripcion)
-        }
-        db.insert(TABLE_NAME, null, values)
-        db.close()
-    }
-
     companion object {
         private const val DATABASE_NAME = "notas.db"
         private const val DATABASE_VERSION = 1
@@ -39,6 +29,16 @@ class NotasDatabaseHelper(context: Context) : SQLiteOpenHelper(
             "DROP TABLE IF EXISTS $TABLE_NAME"
         db?.execSQL(dropTableQuery)
         onCreate(db)
+    }
+
+    fun insertNota(nota: Nota) {
+        val db = writableDatabase
+        val values = ContentValues().apply {
+            put(COLUMN_TITLE, nota.titulo)
+            put(COLUMN_DESCRIPTION, nota.descripcion)
+        }
+        db.insert(TABLE_NAME, null, values)
+        db.close()
     }
 
 }
